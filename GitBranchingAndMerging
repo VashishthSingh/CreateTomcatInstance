@@ -1,0 +1,36 @@
+basic git command
+
+1.  git status
+2.  git init
+3.  git add .
+4.  git add file_name
+5.  git commit -m "commit message"
+6.  git remote add origin url  //adding the remote url where data has to be pushed
+7.  git push -u origin master
+8.  git push origin branch_name  // pushing a branch not master branch
+9.  git clone remote_url
+10. git diff file_name
+11. git reset file_name
+12. git checkout file_name
+
+Branching in git
+
+1.  git branch  --> will show all branch in that remote
+2.  git branch branch_name  --> creating new branch
+3.  git checkout branch_name --> switching to new branch
+4.  do the work and push to github by following command
+5.  git push origin branch_name
+6.  Now check , there will be two branch by using command git branch
+7.  Merge the branch with master_branch
+8.  First need to checkout to master branch use following command
+9.  git checkout master
+10. git merge branch_name
+11. Now how to delete the branch use following command
+12. To delete the branch from local ripository use following
+13. git branch -d branch_name
+14. run git branch command and see the branch deleted from local ripo
+15. To delete the branch from remote ripository use following
+16. git push origin --delete branch_name
+
+
+
