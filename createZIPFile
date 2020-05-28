@@ -1,0 +1,4 @@
+//command to create zip file
+zip -r file_name.zip file_name
+// command to unzip zip file
+unzip file_name.zip

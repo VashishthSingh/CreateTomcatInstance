@@ -1,0 +1,13 @@
+//localhost
+http://localhost:8080
+
+//ip address
+121.244.91.20
+
+//endpoint
+http://httpbin.org/ip
+http://httpbin.org/post
+
+//endpoint
+https://api.github.com/users/google
+
