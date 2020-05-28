@@ -1,0 +1,41 @@
+tomcat admin port       8005       SHUTDOWN
+HTTP/1.1                8080       REQUEST         redirectPost=8443
+AJP/1.3                 8009       protocol="AJP/1.3"  redirectPost=8443
+
+
+How to Start And Stop Tomcat Through Terminal
+1. goto bin folder of tomcat home directry
+2. open trminal
+3. ./catalina.sh start    or sh startup.sh    ---> to start the tomcat
+4. ./catalina.sh stop     or sh shutdown.sh   ---> to stop the tomcat
+5. ps -ef | grep tomcat      ---> to check the staus of tomcat 
+
+
+run web dynamic page website on tomcat server through terminal
+1. start the tomcat using above instruction
+2. got to webapp directory of tomcat and create directory using mkdir dir_name
+3. create files inside the directory
+4. run the file using
+    firefox localhost:8080/loginpage
+	
+
+ Instruction to craete multiple instances of tomcat
+1. create a folder let's say tomcat-instance1
+2. copy bin,conf,logs,temp,webapps,work folder from origin tomcat to tomcat-instance1
+3. create two more file let's say startup-instance1.sh and shutdown-instance1.sh
+4. select these and goto properties->Permissions and check allow executing file as program
+5. cut these files and paste in bin folder of tomcat-instance1 
+6. open conf folder of tomcat-instance and look for server.xml file
+7. open server.xml file and change the three port
+   7.1 change connector port which is used to for shutdown purpose request from 8005 to 8105 (something else)
+   7.1 change connector port which is responsible from listening HTTP/1.1 request from 8080 to something else say 8181
+   7.2 change connector port which is responsible from listening AJP/1.3 request from 8009 to something else say 8109
+8. save the server.xml file
+9. goto bin folder of tomcat-instance and open terminal there
+10. use ./startup-instance1.sh to run the server
+11. use ./shutdown-instance1.sh to stop the server
+12. brows localhost:8181/ to check whether server is running or not
+
+
+
+
